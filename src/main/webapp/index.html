@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0070)http://web.mit.edu/jhawk/mnt/spo/git/git-doc/technical/api-config.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="AsciiDoc 8.6.9" />
+		<title>ConfigCenter</title>
+		<link rel="stylesheet" href="./css/style.css" type="text/css" />
+		<script src="./js/main.js"></script>
+		<script src="./js/time.js"></script>
+		<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+			.en-markup-crop-options {
+			    top: 18px !important;
+			    left: 50% !important;
+			    margin-left: -100px !important;
+			    width: 200px !important;
+			    border: 2px rgba(255,255,255,.38) solid !important;
+			    border-radius: 4px !important;
+			}
+			
+			.en-markup-crop-options div div:first-of-type {
+			    margin-left: 0px !important;
+			}
+		</style>
+	</head>
+	<body class="article" onLoad="alterdate();">
+	<div id="header">
+		<h1>动态配置中心 ConfigCenter API Documents</h1>
+	</div>
+	<div id="content">
+		<div id="preamble">
+			<div class="sectionbody">
+				<div class="paragraph">
+					<p><code>ConfigCenter</code> 主要提供了两种功能：<br/><br/></p>
+					<div class="ulist">
+					<ul>
+						<li>
+							<p>1.动态配置：相关负责人在"统一配置中心页面"修改配置，应用程序无需重启，可自动读取最新的配置项<br/></p>
+						</li>
+						<li>
+							<p>2.统一管理：所有配置资源都在"统一配置中心页面"管理，程序自动加载各组件的默认配置，若服务有特殊需要（如需指定特殊账号连接Oracle数据库），可联系相关负责人，给该服务单独创建配置资源，覆盖默认配置</p>
+						</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+			<div class="sect1">
+			<h2 id="_general_usage">安装使用</h2>
+			<div class="sectionbody">
+				<div class="paragraph">
+					<p><b>安装</b></p>
+					<dd><p><a href="./page/setup.html">加载配置中心jar包</a></p></dd>
+					<p><b>使用</b></p>
+					<dd><p><a href="./page/start.html">ConfigCenter配置中心使用</a></p></dd>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sect1">
+			<h2 id="_general_usage">配置资源</h2>
+			<div class="sectionbody">
+			<p>相关组件的配置项如下：</p>
+				<div class="ulist">
+						<ul>
+							<li>
+								<p>
+									<a	href="./page/json_hbase.html">HBase集群配置</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a	href="./page/json_redis.html">Redis集群配置</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a	href="./page/json_ha.html">Haproxy配置</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a	href="./page/json_jdbc.html">Oracle数据库配置</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a	href="./page/json_jdbchi.html">海南省Oracle数据库配置</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a	href="./page/json_h2ods.html">ODS配置</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sect1">
+			<h2 id="_general_usage">API说明</h2>
+			<div class="sectionbody">
+				<div class="ulist">
+					<ul>
+						<li>
+							<p><a href="./page/api_initConfig.html">初始化配置中心</a></p>
+						</li>
+						<li>
+							<p><a href="./page/api_getDataSource.html">获取配置项值</a></p>
+						</li>
+						<li>
+							<p><a href="./page/api_setScheduler.html">设置资源调度规则</a></p>
+						</li>
+						<li>
+							<p><code><a href="./page/api_setEnv.html">设置远端配置中心</a></code></p>
+						</li>
+						<li>
+							<p><a href="./page/api_setDataSourceType.html">设置获取配置资源类型</a></p>
+						</li>
+					</ul>
+				</div>
+				<p> 1.1.0 版本新增开关类API</p>
+				<div class="ulist">
+					<ul>
+						<li>
+							<p><a href="./page/api_initSwitch.html">初始化开关配置</a></p>
+						</li>
+						<li>
+							<p><a href="./page/api_isOpenSwitch.html">指定省分地市，获取开关状态</a></p>
+						</li>
+						<li>
+							<p><a href="./page/api_switchService.html">指定省分地市，获取对应服务名</a></p>
+						</li>
+					</ul>
+				</div>
+				<div class="paragraph"><p></p></div>
+			</div>
+		</div>
+		<div class="sect1">
+			<h2 id="_general_usage">版本更新说明</h2>
+			<div class="sectionbody">
+
+				<div class="ulist">
+					<ul>
+						<li>
+							<p>1.0.0版本：提供了自动化动态拉取配置项功能，并且提供了3个设置类API，可设置资源调度规则、连接哪个远端配置中心及配置资源类型</p>
+						</li>
+						
+						<li>
+							<p>1.1.0版本：提供了开关配置功能，新增5个switch开关API，可实现在不重启应用程序下，动态切换调用的服务或数据库等（具体实现功能需要结合业务场景）</p>
+						</li>
+					</ul>
+				</div>
+				<div class="paragraph"><p></p></div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-text">
+			Last updated
+			 2017-07-04 17:15:58 EDT
+			 <br/><br/><br/><br/>
+			</div>
+		</div>
+<!--   <form name="form1" method="post" action=""> 
+<center> 
+<p><font color="#FF0000" face="黑体" size="4">上一次修改此文件的时间为：</font></p> 
+<p> 
+<input type="text" name="textfield"> 
+</p> 
+</center> 
+</form> 
+-->
+	</body>
+</html>

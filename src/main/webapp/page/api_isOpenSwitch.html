@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0070)http://web.mit.edu/jhawk/mnt/spo/git/git-doc/technical/api-config.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="generator" content="AsciiDoc 8.6.9" />
+		<title>ConfigCenter</title>
+		<link rel="stylesheet" href="../css/style.css" type="text/css" />
+		<script src="../js/main.js"></script>
+		<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+			.en-markup-crop-options {
+			    top: 18px !important;
+			    left: 50% !important;
+			    margin-left: -100px !important;
+			    width: 200px !important;
+			    border: 2px rgba(255,255,255,.38) solid !important;
+			    border-radius: 4px !important;
+			}
+			
+			.en-markup-crop-options div div:first-of-type {
+			    margin-left: 0px !important;
+			}
+		</style>
+	</head>
+	<body class="article">
+	<div id="header">
+		<h1>指定省分地市，获取开关状态</h1>
+	</div>
+	<div id="content">
+		<div id="preamble">
+			<div class="sectionbody">
+				<p>① 读取默认开关配置资源"switch"，传入省分地市编码，开关打开返回true，关闭返回false，参数包括：</p>
+				<div class="ulist">
+				<ul>
+					<li>
+						<p>provinceCode：省分编码</p>
+					</li>
+					<li>
+						<p>eparchyCode：地市编码</p>
+					</li>
+				</ul>
+			    </div>
+				<div class="listingblock">
+					<p>方法定义：</p>
+					<div class="content">
+						<dd><code>public boolean isOpenSwitch(String provinceCode,String eparchyCode){...};</code></dd>
+					</div>
+				</div>
+				<div class="paragraph">
+					<p>示例代码：</p>
+				</div>
+				<div class="listingblock">
+					<div class="content">
+						<dd><code>boolean switchFlag = ConfigCenter.getInstance().isOpenSwitch("11", "0010");</code></dd>
+					</div>
+				</div>
+				<p><br/>② 读取指定开关配置资源名，其他同方法①，参数包括：：</p>
+				<div class="ulist">
+				<ul>
+					<li>
+						<p>sourceName：开关配置资源名</p>
+					</li>
+					<li>
+						<p>provinceCode：省分编码</p>
+					</li>
+					<li>
+						<p>eparchyCode：地市编码</p>
+					</li>
+				</ul>
+			    </div>
+				<div class="listingblock">
+					<p>方法定义：</p>
+					<div class="content">
+						<dd><code>public boolean isOpenSwitch(String sourceName,String provinceCode,String eparchyCode){...};</code></dd>
+					</div>
+				</div>
+				<div class="paragraph">
+					<p>示例代码：</p>
+				</div>
+				<div class="listingblock">
+					<div class="content">
+						<dd><code>boolean switchFlag = ConfigCenter.getInstance().isOpenSwitch("switchhto","11", "0010");</code></dd>
+					</div>
+				</div>
+		</div>
+</div>
+
+<div id="footer">
+<div id="footer-text">
+Last updated
+ 2017-07-04 17:15:58 EDT
+</div>
+</div>
+
+
+</body></html>
