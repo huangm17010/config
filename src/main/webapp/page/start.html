@@ -31,11 +31,21 @@
 		<div id="preamble">
 			<div class="sectionbody">
 				<div class="paragraph">
-					<p>ConfigCenter使用示例代码如下：<br/> <br/>初始化配置中心</p>
+					<p>ConfigCenter使用示例代码如下：<br/> <br/>
+					初始化配置中心，自动化加载配置项，建议在程序运行初期执行（初始化方法initConfig()只有<font color="red">第一次调用有效）</font></p>
 					<div class="listingblock">
 						<div class="content">
-							<p><code>ConfigCenter.getInstance().initConfig();</code></p>
+							<dd><code>ConfigCenter.getInstance().<a href="../page/api_initConfig.html">initConfig()</a>;</code></dd>
 						</div>
+					</div>
+					<div class="paragraph">
+					<p>本地开发使用，需要调用设置类API，指定远端配置中心，示例代码（连接微服务开发环境配置）：</p>
+					</div>
+						<div class="listingblock">
+							<div class="content">
+								<dd><code>ConfigCenter.getInstance().<a href="../page/api_setEnv.html">setEnv("springbootdemo", "10.124.142.82", "8680")</a>.<a href="../page/api_initConfig.html">initConfig()</a>;</code></dd>
+							</div>
+							<font color="red"><p>注：设置类API需要在initConfig()前调用</p></font>
 					</div>
 				</div>
 			</div>
@@ -47,7 +57,7 @@
 					<p>获取配置项值，传入参数：<font color="red">配置资源名</font>（如"redis"），<font color="red">配置项名</font>（如"ip"）</p>
 					<div class="listingblock">
 						<div class="content">
-							<p><code>String redisIp = ConfigCenter.getInstance().getDataSource(<font color="red">"redis"</font>).getProperty(<font color="red">"ip"</font>);</code></p>
+							<dd><code>String redisIp = ConfigCenter.getInstance().<a href="../page/api_getDataSource.html">getDataSource(<font color="red">"redis"</font>).getProperty(<font color="red">"ip"</font>)</a>;</code></dd>
 						</div>
 					</div>
 				</div>
