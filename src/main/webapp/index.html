@@ -35,7 +35,7 @@
 					<div class="ulist">
 					<ul>
 						<li>
-							<p>1.动态配置：相关负责人在"统一配置中心页面"修改配置，应用程序无需重启，自动读取最新配置项<br/></p>
+							<p>1.动态获取：相关负责人在"统一配置中心页面"修改配置，应用程序无需重启，自动读取最新配置项<br/></p>
 						</li>
 						<li>
 							<p>2.统一管理：所有配置资源都在"统一配置中心页面"管理，程序自动加载各组件的默认配置，若服务有特殊需要（如需指定特殊账号连接Oracle数据库），可联系相关负责人，给该服务单独创建配置资源，覆盖默认配置</p>
@@ -53,7 +53,7 @@
 					<p><b>安装</b></p>
 					<dd><p><a href="./page/setup.html">加载配置中心jar包</a></p></dd>
 					<p><b>使用</b></p>
-					<dd><p><a href="./page/start.html">ConfigCenter配置中心使用</a></p></dd>
+					<dd><p><a href="./page/start.html">ConfigCenter应用示例</a></p></dd>
 				</div>
 			</div>
 		</div>
@@ -121,7 +121,7 @@
 						</li>
 					</ul>
 				</div>
-				<p> 1.1.0 版本新增开关类API</p>
+				<p> 1.1.0 版本新增 开关类API</p>
 				<div class="ulist">
 					<ul>
 						<li>
@@ -135,21 +135,30 @@
 						</li>
 					</ul>
 				</div>
+				<p> 1.2.0 版本新增 监听器API</p>
+				<div class="ulist">
+					<ul>
+						<li>
+							<p><a href="./page/api_addSourceListener.html">配置资源监听器</a></p>
+						</li>
+					</ul>
+				</div>
 				<div class="paragraph"><p></p></div>
 			</div>
 		</div>
 		<div class="sect1">
 			<h2 id="_general_usage">版本更新说明</h2>
 			<div class="sectionbody">
-
 				<div class="ulist">
 					<ul>
 						<li>
-							<p>1.0.0版本：提供了自动化动态拉取配置项功能，并且提供了3个设置类API，可设置资源调度规则、连接哪个远端配置中心及配置资源类型</p>
+							<p>1.0.0版本：提供自动化动态拉取配置项功能，以及3个设置类API，可设置资源调度规则、指定远端配置中心及配置资源类型</p>
 						</li>
-						
 						<li>
-							<p>1.1.0版本：提供了开关配置功能，新增5个switch开关API，可实现在不重启应用程序下，动态切换调用的服务或数据库等（具体实现功能需要结合业务场景）</p>
+							<p>1.1.0版本：提供开关配置功能，新增3个动态开关API，可实现在不重启应用程序下，动态切换调用的服务或数据库等（具体实现功能需要结合业务场景）</p>
+						</li>
+						<li>
+							<p>1.2.0版本：提供自定义配置资源监听器功能，当指定的配置资源变化后，执行自定义程序，如数据库配置改变后，重新建立数据库连接等</p>
 						</li>
 					</ul>
 				</div>
@@ -159,7 +168,7 @@
 		<div id="footer">
 			<div id="footer-text">
 			Last updated
-			 2017-08-28 16:15:58 EDT
+			 2017-08-30 17:38:58 EDT
 			 <br/><br/><br/><br/>
 			</div>
 		</div>

@@ -30,7 +30,7 @@
 	<div id="content">
 		<div id="preamble">
 			<div class="sectionbody">
-				<p>初始化配置中心，自动化加载配置项，建议在程序运行初期执行（初始化方法initConfig()只有<font color="red">第一次调用有效）</font></p>
+				<p>初始化配置中心，自动化加载配置项到本地缓存，可在程序运行初期执行（初始化方法initConfig()只有<font color="red">第一次调用有效）</font></p>
 				<div class="listingblock">
 					<p>方法定义：</p>
 					<div class="content">
@@ -46,32 +46,22 @@
 					</div>
 				</div>
 				<div class="paragraph">
-					<p>有特殊需求，需要使用设置类API，示例代码：</p>
+					<p>有特殊需求，需要使用设置类API，示例代码：<font color="red">( 设置类API需要在调用 initConfig() 前执行)</font></p>
 				</div>
 				<div class="listingblock">
 					<div class="content">
-						<dd><code>ConfigCenter.getInstance().<a href="../page/api_setScheduler.html">setScheduler(1000*60, 1000*60, false)</a>.<a href="../page/api_setEnv.html">setEnv("springbootdemo", "10.124.142.82", "8680")</a>.<a href="../page/api_setDataSourceType.html">setDataSourceType('0')</a>.initConfig();</code></dd>
+						<dd><code>ConfigCenter.getInstance().<a href="../page/api_setScheduler.html">setScheduler(<font color="red">1000*60, 1000*60, false</font>)</a>.<a href="../page/api_setEnv.html">setEnv("<font color="red">springbootdemo</font>")</a>.<a href="../page/api_setDataSourceType.html">setDataSourceType('<font color="red">0</font>')</a>.initConfig();</code></dd>
 					</div>
-					<font color="red"><p>注：设置类API需要在initConfig()前调用</p></font>
 				</div>
-				<div class="paragraph">
-					<p>需要使用 1.1.0 版本新增开关功能，示例代码：</p>
-				</div>
-				<div class="listingblock">
-					<div class="content">
-						<dd><code>ConfigCenter.getInstance().<a href="../page/api_setScheduler.html">setScheduler(1000*60, 1000*60, false)</a>.<a href="../page/api_setEnv.html">setEnv("springbootdemo", "10.124.142.82", "8680")</a>.<a href="../page/api_setDataSourceType.html">setDataSourceType('0')</a>.initConfig().<a href="../page/api_initSwitch.html">initSwitch()</a>;</code></dd>
-					</div>
-					<font color="red"><p>注：initSwitch()方法需要在initConfig()后调用</p></font>
-				</div>
+			</div>
 		</div>
-</div>
+	</div>
 
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2017-07-04 17:15:58 EDT
+ 2017-08-30 17:38:58 EDT
 </div>
 </div>
-
 
 </body></html>
