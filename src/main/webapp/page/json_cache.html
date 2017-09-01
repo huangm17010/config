@@ -24,9 +24,9 @@
 	</head>
 	<body class="article">
 	<div id="header">
-		<h1>ODS配置</h1>
+		<h1>cache缓存配置</h1>
 	</div>
-	<p align="right"><a href="../index.html">返回首页</a></p>
+		<p align="right"><a href="../index.html">返回首页</a></p>
 	<div id="content">
 		<div id="preamble">
 			<div class="sectionbody">
@@ -35,26 +35,24 @@
 					<div class="ulist">
 					<ul>
 						<li>
-							<p>h2ods</p>
+							<p>cache</p>
 						</li>
 					</ul>
 				    </div>
-					<p>配置项名：</p>
+				    <p>配置项名：</p>
 					<div class="ulist">
 					<ul>
 						<li>
-							<p>ip</p>
-						</li>
-						<li>
-							<p>port</p>
+							<p>2i2c_redis_ip</p>
+							<p>2i2c_redis_port</p>
 						</li>
 					</ul>
 				    </div>
 					<div class="listingblock">
 					<p>示例代码：</p>
 						<div class="content">
-						<p><code>String odsIp = ConfigCenter.getInstance().getDataSource("h2ods").getProperty("ip");</code></p>
-						<p><code>String odsPort = ConfigCenter.getInstance().getDataSource("h2ods").getProperty("port");</code></p>
+							<p><code>String cache2i2cRedisIp = ConfigCenter.getInstance().getDataSource("cache").getProperty("2i2c_redis_ip");<br/>
+							String cache2i2cRedisPort = ConfigCenter.getInstance().getDataSource("cache").getProperty("2i2c_redis_port");</code></p>
 						</div>
 					</div>
 				</div>
@@ -65,7 +63,7 @@
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2017-07-04 17:15:58 EDT
+ 2017-09-01 15:15:58 EDT
 </div>
 </div>
 

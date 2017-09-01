@@ -24,7 +24,7 @@
 	</head>
 	<body class="article">
 	<div id="header">
-		<h1>海南省Oracle数据库配置</h1>
+		<h1>cb大数据详单配置</h1>
 	</div>
 	<p align="right"><a href="../index.html">返回首页</a></p>
 	<div id="content">
@@ -35,7 +35,10 @@
 					<div class="ulist">
 					<ul>
 						<li>
-							<p>jdbchi</p>
+							<p>cbcdr</p>
+						</li>
+						<li>
+							<p>sdcdr（经分）</p>
 						</li>
 					</ul>
 				    </div>
@@ -43,22 +46,20 @@
 					<div class="ulist">
 					<ul>
 						<li>
-							<p>jdbc_user</p>
+							<p>ip</p>
 						</li>
 						<li>
-							<p>jdbc_password</p>
-						</li>
-						<li>
-							<p>jdbc_crm_url</p>
+							<p>port</p>
 						</li>
 					</ul>
 				    </div>
 					<div class="listingblock">
 					<p>示例代码：</p>
 						<div class="content">
-							<p><code>String jdbc_user = ConfigCenter.getInstance().getDataSource("jdbchi").getProperty("jdbc_user");</code></p>
-							<p><code>String jdbc_password = ConfigCenter.getInstance().getDataSource("jdbchi").getProperty("jdbc_password");</code></p>
-							<p><code>String jdbc_crm_url = ConfigCenter.getInstance().getDataSource("jdbchi").getProperty("jdbc_crm_url");</code></p>
+						<p><code>String cbcdrIp = ConfigCenter.getInstance().getDataSource("cbcdr").getProperty("ip");</code></p>
+						<p><code>String cbcdrPort = ConfigCenter.getInstance().getDataSource("cbcdr").getProperty("port");</code></p>
+						<p><code>String sdcdrIp = ConfigCenter.getInstance().getDataSource("sdcdr").getProperty("ip");</code></p>
+						<p><code>String sdcdrPort = ConfigCenter.getInstance().getDataSource("sdcdr").getProperty("port");</code></p>
 						</div>
 					</div>
 				</div>
@@ -69,7 +70,7 @@
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2017-07-04 17:15:58 EDT
+ 2017-09-01 16:58:58 EDT
 </div>
 </div>
 

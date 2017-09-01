@@ -24,18 +24,24 @@
 	</head>
 	<body class="article">
 	<div id="header">
-		<h1>Oracle数据库配置</h1>
+		<h1>各省Oracle数据库配置</h1>
 	</div>
 	<p align="right"><a href="../index.html">返回首页</a></p>
 	<div id="content">
 		<div id="preamble">
 			<div class="sectionbody">
 				<div class="paragraph">
-				<p>配置资源名：</p>
+					<p>配置资源名：</p>
 					<div class="ulist">
 					<ul>
 						<li>
-							<p>jdbc</p>
+							<p>jdbchi（海南）</p>
+						</li>
+						<li>
+							<p>jdbcln（辽宁）</p>
+						</li>
+						<li>
+							<p>jdbcsd（山东）</p>
 						</li>
 					</ul>
 				    </div>
@@ -46,60 +52,23 @@
 							<p>jdbc_user</p>
 						</li>
 						<li>
-							<p>jdbc_crm_user</p>
-						</li>
-						<li>
-							<p>jdbc_crm1_user</p>
-						</li>
-						<li>
-							<p>jdbc_ess1_user</p>
-						</li>
-						<li>
 							<p>jdbc_password</p>
 						</li>
 						<li>
-							<p>jdbc_crm_password</p>
-						</li>
-						<li>
-							<p>jdbc_crm1_password</p>
-						</li>
-						<li>
-							<p>jdbc_ess1_password</p>
-						</li>
-						<li>
-							<p>jdbc_act1_password</p>
-						</li>
-						......
-						<li>
-							<p>jdbc_act8_url</p>
-						</li>
-						<li>
-							<p>jdbc_crm8_url</p>
-						</li>
-						<li>
-							<p>jdbc_ess8_url</p>
-						</li>
-						<li>
-							<p>jdbc_cen_url</p>
-						</li>
-						<li>
-							<p>jdbc_maximumpoolsize</p>
-						</li>
-						<li>
-							<p>jdbc_minimumpoolsize</p>
+							<p>jdbc_crm_url</p>
 						</li>
 					</ul>
 				    </div>
 					<div class="listingblock">
 					<p>示例代码：</p>
 						<div class="content">
-							<p><code>String jdbc_user = ConfigCenter.getInstance().getDataSource("jdbc").getProperty("jdbc_user");</code></p>
-							<p><code>String jdbc_password = ConfigCenter.getInstance().getDataSource("jdbc").getProperty("jdbc_password");</code></p>
-							<p><code>String jdbc_crm1_url = ConfigCenter.getInstance().getDataSource("jdbc").getProperty("jdbc_crm1_url");</code></p>
+							<p><code>String jdbc_user = ConfigCenter.getInstance().getDataSource("jdbchi").getProperty("jdbc_user");</code></p>
+							<p><code>String jdbc_password = ConfigCenter.getInstance().getDataSource("jdbchi").getProperty("jdbc_password");</code></p>
+							<p><code>String jdbc_crm_url = ConfigCenter.getInstance().getDataSource("jdbchi").getProperty("jdbc_crm_url");</code></p>
 							<p><code>......</code></p>
-							<p><code>String jdbc_cen_url = ConfigCenter.getInstance().getDataSource("jdbc").getProperty("jdbc_cen_url");</code></p>
-							<p><code>String jdbc_maximumpoolsize = ConfigCenter.getInstance().getDataSource("jdbc").getProperty("jdbc_maximumpoolsize");</code></p>
-							<p><code>String jdbc_minimumpoolsize = ConfigCenter.getInstance().getDataSource("jdbc").getProperty("jdbc_minimumpoolsize");</code></p>
+							<p><code>String jdbc_user = ConfigCenter.getInstance().getDataSource("jdbcsd").getProperty("jdbc_user");</code></p>
+							<p><code>String jdbc_password = ConfigCenter.getInstance().getDataSource("jdbcsd").getProperty("jdbc_password");</code></p>
+							<p><code>String jdbc_crm_url = ConfigCenter.getInstance().getDataSource("jdbcsd").getProperty("jdbc_crm_url");</code></p>
 						</div>
 					</div>
 				</div>
