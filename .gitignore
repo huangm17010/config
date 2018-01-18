@@ -1,1 +1,6 @@
+/bin/
+/com/
 /target/
+
+.settings/
+.classpath
