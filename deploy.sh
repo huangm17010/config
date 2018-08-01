@@ -21,7 +21,7 @@ killTomcat()
     fi
 }
 cd $PROJ_PATH/config
-mvn clean install
+/opt/apache-maven-3.5.4/bin/mvn clean install
 
 # 停tomcat
 killTomcat
