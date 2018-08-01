@@ -32,7 +32,7 @@ rm -f $TOMCAT_APP_PATH/webapps/ROOT.war
 rm -f $TOMCAT_APP_PATH/webapps/config.war
 
 # 复制新的工程
-cp $PROJ_PATH/learn/target/config.war $TOMCAT_APP_PATH/webapps/
+cp $PROJ_PATH/config/target/config.war $TOMCAT_APP_PATH/webapps/
 
 cd $TOMCAT_APP_PATH/webapps/
 mv config.war ROOT.war
